@@ -1,38 +1,19 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>TEST 좀 해보자</title>
-        <script src="https://unpkg.com/vue"></script>
-        
+        <title>Vuejs Test</title>
+        <script src="index.js"></script>
+        <script src="index.json"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        <div id="app">
-            <p> {{ message }} </p>
-        </div>
-
-        <div id="app-2">
-            <span v-bind:title="message">
-                마우스 올리면 동적으로 시간이 표시 된다?
-            </span>
-        </div>
-
-        <div id="app-3">
-            <p v-if="seen"> 보고 끄기 가능하다 </p>
-        </div>
-
-        <div id="app-4">
-            <ol>
-                <li v-for="todo in todos">
-                    {{ todo.text }}
-                </li>
-            </ol>
-        </div>
-
-        <div id="app-5">
-            <p>{{ message }}</p>
-            <button v-on:click="reverseMessage">메세지 뒤집기</button>
-        </div>
-
-        <script src="index.js"></script>
+        <ol>
+            <div id="contents">
+                <li class="subheading">Basic 관련</li>
+                <ul>
+                    <li><a href="public/src/basic/index.html">basic 체험</a></li>
+                </ul>
+            </div>
+        </ol>
     </body>
 </html>

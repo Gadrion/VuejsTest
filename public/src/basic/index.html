@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>TEST 좀 해보자</title>
+        <script src="../../lib/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p> {{ message }} </p>
+        </div>
+
+        <div id="app-2">
+            <span v-bind:title="message">
+                마우스 올리면 동적으로 시간이 표시 된다?
+            </span>
+        </div>
+
+        <div id="app-3">
+            <p v-if="seen"> 보고 끄기 가능하다 </p>
+        </div>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">메세지 뒤집기</button>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
