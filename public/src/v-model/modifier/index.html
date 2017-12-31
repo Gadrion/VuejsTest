@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>v-model modifier</title>
+        <script src="../../../lib/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <h2>v-model modifier</h2>
+        <div id="modifier1">
+            <h4>lazy</h4>
+            <input v-model.lazy="msg">
+            {{ msg }}
+        </div>
+
+        <div id="modifier2">
+            <h4>number</h4>
+            <input v-model.number="age" type="number" @change="checkType">
+            {{ age }}
+        </div>
+
+        <div id="modifier3">
+            <h4>trim</h4>
+            <input v-model.trim="msg">
+            {{ msg }}
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

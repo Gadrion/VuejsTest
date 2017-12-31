@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>v-model tutorial</title>
+        <script src="../../../lib/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <h2>v-model tutorial</h2>
+        <div id="tutorial1">
+            <h4>문자열</h4>
+            <input v-model="message" placeholder="여기를 수정해보세요">
+            <p>메시지: {{ message }}</p>
+        </div>
+
+        <div id="tutorial2">
+            <h4>여러 줄을 가지는 메시지:</h4>
+            <p style="white-space: pre-line">{{ message }}</p>
+            <br>
+            <textarea v-model="message" placeholder="여러줄을 입력해보세요"></textarea>
+        </div>
+
+        <div id="tutorial3">
+            <h4>체크박스</h4>
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">{{ checked }}</label>
+        </div>
+
+        <div id="tutorial4">
+            <h4>여러개의 체크박스</h4>
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>체크한 이름: {{ checkedNames }}</span>
+        </div>
+
+        <div id="tutorial5">
+            <h4>라디오</h4>
+            <input type="radio" id="one" value="One" v-model="picked" checked>
+            <label for="one">One</label>
+            <br>
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>선택: {{ picked }}</span>
+        </div>      
+
+        <div id="tutorial6">
+            <h4>하나의 셀렉트</h4>
+            <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            </select>
+            <span>선택함: {{ selected }}</span>
+        </div>
+        
+        <div id="tutorial7">
+            <h4>다중 셀렉트</h4>
+            <select v-model="selected" multiple>
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            </select>
+            <span>선택함: {{ selected }}</span>
+        </div>
+
+        <div id="tutorial8">
+            <h4>v-for를 이용한 동적 옵션 렌더링</h4>
+            <select v-model="selected">
+                <option v-for="option in options" :value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>Selected: {{ selected }} </span>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

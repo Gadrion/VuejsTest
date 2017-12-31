@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>v-model Binding</title>
+        <script src="../../../lib/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <h2>v-model Binding</h2>
+        <div id="binding1">
+            <h4>체크박스</h4>
+            <input
+                type="checkbox"
+                v-model="toggle"
+                v-bind:true-value="a"
+                v-bind:false-value="b"
+            >
+            <label for="checkbox">{{ toggle }}</label>
+        </div>
+
+        <div id="binding2">
+            <h4>라디오</h4>
+            <input type="radio" id="pick" v-model="pick" v-bind:value="a">
+            <label for="pick">One</label>
+            <br>
+            <span>선택: {{ pick }}</span>
+        </div>
+
+        <div id="binding3">
+            <h4>셀렉트 옵션</h4>
+            <select v-model="selected" @change="changeValue">
+            <!-- inline object literal -->
+                <option v-bind:value="{ number: 123 }">123</option>
+            </select>
+            <span>선택함: {{ selected }}</span>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

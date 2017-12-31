@@ -3,21 +3,21 @@ const app = new Vue({
     data: {
         message: `Hello Vue.js! I'm GD`
     }
-})
+});
 
 const app2 = new Vue({
     el: '#app-2',
     data: {
         message: `이페이지는 ${new Date()} 에 로드 되었다?`
     }
-})
+});
 
 const app3 = new Vue({
     el: '#app-3',
     data: {
         seen: true
     }
-})
+});
 
 const app4 = new Vue({
     el: '#app-4',
@@ -28,7 +28,7 @@ const app4 = new Vue({
             { text: '뭐라도 만들어 보자' }
         ]
     }
-})
+});
 
 const app5 = new Vue({
     el: '#app-5',
@@ -40,4 +40,4 @@ const app5 = new Vue({
             this.message = this.message.split('').reverse().join('')
         }
     }
-})
+});

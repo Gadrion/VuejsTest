@@ -1,22 +1,30 @@
-{
-    "capters":[
-        {
-            "subheading" : "basic",
-            "pages" : [
-                {
-                    "url" : "public/scr/basic",
-                    "url_title" : "기초를 다지자"
-                }
-            ]
-        },
-        {
-            "subheading" : "basic",
-            "pages" : [
-                {
-                    "url" : "public/scr/basic",
-                    "url_title" : "기초를 다지자"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "subheading" : "basic",
+        "pages" : [
+            {
+                "url" : "public/src/basic",
+                "url_title" : "기초를 다지자"
+            }
+        ]
+    },
+    {
+        "subheading" : "v-model",
+        "pages" : [
+            {
+                "url" : "public/src/v-model/tutorial",
+                "url_title" : "기본 사용법"
+            },
+
+            {
+                "url" : "public/src/v-model/binding",
+                "url_title" : "바인딩"
+            },
+
+            {
+                "url" : "public/src/v-model/modifier",
+                "url_title" : "수식어"
+            }
+        ]
+    }
+]
