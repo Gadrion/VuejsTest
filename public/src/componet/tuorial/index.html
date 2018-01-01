@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>component tutorial</title>
+        <script src="../../../lib/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <div id="tutorial1">
+            <h4>전역 등록</h4>
+            <my-component></my-component>
+        </div>
+
+        <div id="tutorial2">
+            <h4>지역 등록</h4>
+            <my-component2></my-component2>
+        </div>
+
+        <div id="tutorial3">
+            <h4>DOM 템플릿 구문 분석 경고</h4>
+            <table>
+                <tr is='my-component3'></tr>
+            </table>
+        </div>
+        <div id="tutorial4">
+            <h4>DOM 템플릿 구문 분석 경고2</h4>
+            <script id="tutorial4-x-template" type="text/x-template">
+                <p>tutorial4-x-template</p>
+            </script>
+            <my-component4></my-component4>
+        </div>
+        <div id="tutorial5">
+            <h4>Data 사용 방법</h4>
+            <my-component5></my-component5>
+        </div>
+        <div id="tutorial6">
+            <h4>Data 사용 방법2</h4>
+            <my-component6></my-component6>
+            <my-component6></my-component6>
+            <my-component6></my-component6>
+        </div>
+        <div id="tutorial7">
+            <h4>Data 사용 방법3</h4>
+            <my-component7></my-component7>
+            <my-component7></my-component7>
+            <my-component7></my-component7>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
