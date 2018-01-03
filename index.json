@@ -26,5 +26,19 @@
                 "url_title" : "수식어"
             }
         ]
+    },
+    {
+        "subheading" : "component",
+        "pages" : [
+            {
+                "url" : "public/src/component/tutorial",
+                "url_title" : "기본 사용법"
+            },
+
+            {
+                "url" : "public/src/component/props",
+                "url_title" : "props 사용법"
+            }
+        ]
     }
 ]
