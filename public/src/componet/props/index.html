@@ -20,13 +20,25 @@
             <br>
             <child :my-message='parentMsg'></child>
         </div>
-        <!--<div id="props4">
+        <div id="props4">
             <h4>v-bind 객체 전달</h4>
-            <todo-item v-bind="todo"></todo-item>
-        </div>-->
+            <todo-item v-bind='todo'></todo-item>
+        </div>
         <div id="props5">
             <h4>리터럴 vs. 동적</h4>
             <comp :some-prop="1"></comp>
+        </div>
+        <div id="props6">
+            <h4>단방향 데이터 흐름</h4>
+            <child :inital-count='initalCount'></child>
+        </div>
+        <div id="props7">
+            <h4>단방향 데이터 흐름2</h4>
+            <child :init-size='initSize'></child>
+        </div>
+        <div id="props8">
+            <h4>Prop 검증</h4>
+            <example v-bind='exampleData'></example>
         </div>
 
         <script src="index.js"></script>
