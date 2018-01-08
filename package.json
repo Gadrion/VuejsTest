@@ -1,0 +1,13 @@
+{
+  "name": "vuejstest",
+  "version": "1.0.0",
+  "description": "Vuejs Test",
+  "main": "index.html",
+  "repository": "https://github.com/Gadrion/VuejsTest.git",
+  "author": "gadrion <wjdrlehs57@naver.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "less": "^2.7.3"
+  }
+}

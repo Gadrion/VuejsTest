@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>component tutorial</title>
+        <script src="../../../lib/vue.js"></script>
+        <script src="../../../lib/jquery.min.js"></script>
+        <script src="../../../lib/bootstrap/bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../lib/bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <div id="none_props1">
+            <h4>자식의 root 엘리먼트에 자동 추가</h4>
+            <bs-data-input data-toggle="dropdown"></bs-data-input>
+        </div>
+        <div id="none_props2">
+            <h4>v-on을 이용한 사용자 지정 이벤트</h4>
+            <display :total='total'></display>
+            <button-counter v-on:increment="incrementTotal"></button-counter>
+            <button-counter v-on:increment="incrementTotal" @click.native='onClick'></button-counter>
+        </div>
+        <div id="none_props3">
+            <h4>.sync 수식어</h4>
+            <comp :foo.sync='bar' @click.native='onClick'></comp>
+        </div>
+        <div id="none_props4">
+            <h4>사용자 정의 이벤트를 사용하여 폼 입력 컴포넌트 만들기</h4>
+            <currency-input v-model='price'></currency-input>
+        </div>
+        <div id="none_props5">
+            <h4>컴포넌트의 v-model 사용자 정의</h4>
+            <!--<my-checkbox v-model='foo' value='some value'></my-checkbox>-->
+            <my-checkbox :checked="foo" @change="val => { console.log(val); foo = val }" value='some value'></my-checkbox>
+            
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -57,12 +57,12 @@ const props6 = new Vue({
     el: '#props6',
     data: function () {
         return {
-            initalCount: 1
+            initialCount: 1
         }
     },
     components: {
         'child': {
-            props: ['initalCount'],
+            props: ['initialCount'],
             template: `<span>
                         <p>{{count}}</p>
                         <button @click="plus">+</button>
@@ -94,24 +94,26 @@ const props7 = new Vue({
         'child': {
             props: ['initSize'],
             template: `<span>
-                        <p>{{size}}</p>
+                        <p>{{normalizedSize}}</p>
                         <button @click="result">normalizedSize</button>
                        </span>`,
             data: function() {
                 return { size: this.initSize };
             },
             computed: {
-                normalizedSize : function() {
-                    console.log('info',typeof this.size);
-                    let tempsize = this.size;
-                    const reverseSize = tempsize.split("").reverse().join("");
-                    console.log('info',reverseSize);
-                    return reverseSize;
+                normalizedSize : {
+                    get : function() {
+                        return this.size.split("").reverse().join("");
+                    },
+                    set : function() {
+
+                    }
                 }
             },
             methods: {
                 result: function (){
-                    this.size = this.normalizedSize;
+                    // this.size = this.normalizedSize;
+                    this.size = 'qqqqq';
                 }
             }
         }

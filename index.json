@@ -38,6 +38,11 @@
             {
                 "url" : "public/src/component/props",
                 "url_title" : "props 사용법"
+            },
+
+            {
+                "url" : "public/src/component/none_props",
+                "url_title" : "props가 아닌 속성 사용법"
             }
         ]
     }
