@@ -43,6 +43,11 @@
             {
                 "url" : "public/src/component/none_props",
                 "url_title" : "props가 아닌 속성 사용법"
+            },
+
+            {
+                "url" : "public/src/component/slot",
+                "url_title" : "슬롯을 사용한 컨텐츠 배포"
             }
         ]
     }

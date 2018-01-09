@@ -31,7 +31,11 @@
             <h4>컴포넌트의 v-model 사용자 정의</h4>
             <!--<my-checkbox v-model='foo' value='some value'></my-checkbox>-->
             <my-checkbox :checked="foo" @change="val => { console.log(val); foo = val }" value='some value'></my-checkbox>
-            
+        </div>
+        <div id="none_props6">
+            <h4>비 부모-자식간 통신</h4>
+            <bustest1></bustest1>
+            <bustest2></bustest2>
         </div>
         
         <script src="index.js"></script>

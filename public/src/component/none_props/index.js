@@ -155,3 +155,41 @@ const none_props5 = new Vue({
         }
     }
 });
+
+const none_props6 = new Vue({
+    el: '#none_props6',
+    components: {
+        'bustest1' : {
+            data: function(){
+                return {
+                    count: 1
+                }
+            },
+            template: `<p>{{count}}<button @click="onClick1">+</button></p>`,
+            methods: {
+                onClick1: function() {
+                    this.$emit('onClick1',this.count);
+                    this.count += 1;
+                }
+            }
+        },
+        'bustest2' : {
+            data: function(){
+                return {
+                    count: 0
+                }
+            },
+            template: `<p>{{count}}<button @click="onClick2">+</button></p>`,
+            methods: {
+                onClick2: function() {
+                    this.count += 1;
+                }
+            }
+        }
+    }
+});
+
+none_props6.$children[0].$on('onClick1', function(id){
+    console.log(id);
+    none_props6.$children[1].$data.count = id;
+});
