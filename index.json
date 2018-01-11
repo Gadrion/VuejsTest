@@ -48,6 +48,11 @@
             {
                 "url" : "public/src/component/slot",
                 "url_title" : "슬롯을 사용한 컨텐츠 배포"
+            },
+
+            {
+                "url" : "public/src/component/dynamic",
+                "url_title" : "동적 컴포넌트"
             }
         ]
     }

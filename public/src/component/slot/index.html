@@ -7,15 +7,18 @@
     </head>
     <body>
         <div id="slot1">
+            <h4>범위 컴파일</h4>
             {{ message }}
             <child-component>
                 {{ message }}
             </child-component>
         </div>
         <div id="slot2">
+            <h4>범위 컴파일2</h4>
             <child-component v-show="someChildProperty"></child-component>
         </div>
         <div id="slot3">
+            <h4>단일 슬롯</h4>
             <h1>나는 부모 컴포넌트의 제목입니다</h1>
             <child>
                 <p>이것은 원본 컨텐츠 입니다.</p>
@@ -23,6 +26,7 @@
             </child>
         </div>
         <div id="slot4">
+            <h4>이름을 가지는 슬롯</h4>
             <app-layout>
                 <h1 slot='header'>여기에 페이지 제목이 위치합니다.</h1>
 
@@ -31,6 +35,28 @@
 
                 <p slot='footer'>여기에 연락처 정보입니다.</p>
             </app-layout>
+        </div>
+        <div id="slot5">
+            <h4>범위를 가지는 슬롯</h4>
+            <child>
+                <template slot-scope='props'>
+                    <p>hello from parrent</p>
+                    <p>{{ props.text }}</p>
+                </template>
+            </child>
+        </div>
+        <div id="slot6">
+            <h4>범위를 가지는 슬롯 - 리스트 컴포넌트</h4>
+            <my-awesome-list :items='items'>
+                <li
+                    slot='item'
+                    slot-scope='props'
+                    class="my-fancy-item">
+                    {{ props.text }}
+            </my-awesome-list>
+        </div>
+        <div id='slot7'>
+            {{ arr }}
         </div>
         <script src="index.js"></script>
     </body>

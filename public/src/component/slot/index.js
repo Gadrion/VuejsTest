@@ -67,3 +67,45 @@ const slot4 = new Vue({
         }
     }
 });
+
+const slot5 = new Vue({
+    el: '#slot5',
+    components: {
+        'child': {
+            template: `<div>
+                            <slot text='hello from child'></slot>
+                       </div>`
+        }
+    }
+});
+
+const slot6 = new Vue({
+    el: '#slot6',
+    data: function() {
+        return {
+            'items': [{text: 'qweqw1'}, {text: 'qweqw2'}, {text: 'qweqw3'}]
+        }
+    },
+    components: {
+        'my-awesome-list': {
+            props: ['items'],
+            template: `<ul>
+                            <slot name="item"
+                                v-for="item in items"
+                                :text="item.text">
+                            </slot>
+                        </ul>`
+        }
+    }
+});
+
+const slot7 = new Vue({
+    el: '#slot7',
+    data: function() {
+        return {
+            arr: [a=1, , c=5]
+        }
+    }
+});
+
+// slot7.$data.arr = [1, ,5];

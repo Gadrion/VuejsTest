@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dynamic tutorial</title>
+        <script src="../../../lib/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+    <body>
+        <div id="dynamic1">
+            <h4>동적 컴포넌트</h4>
+            <button @click='onClick'>next</button>
+            <component v-bind:is="currentView"></component>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
